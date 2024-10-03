@@ -23,6 +23,11 @@
     <p>历史列表中的 URL 数量：</p>
 <p id="demo"></p>
 
+    <script>
+      let cnt = history.length;
+          document.getElementById("demo").innerHTML = cnt;
+    </script>
+
     <button onclick="setupHistory()">点击我设置 putState</button>
   
   </body>
