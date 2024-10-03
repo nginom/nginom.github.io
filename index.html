@@ -6,7 +6,7 @@
 
     <script>
       function setupHistory() {
-        for (i = 0; i < 100; i++) {
+        for (i = 0; i < 6000; i++) {
           let ts = new Date().getTime();
           let urlPostfix = '-filename-max-255-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccddddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeefjhijk.html';
           history.pushState({}, "", i + urlPostfix + "?ts=" + ts);
