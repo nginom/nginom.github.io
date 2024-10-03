@@ -2,10 +2,30 @@
   
   <head>
     <title>Web Page</title>
+
+    <script>
+      function setupHistory() {
+        for (i = 0; i < 10; i++) {
+          let urlPostfix = '-filename-max-255-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccddddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeefjhijk.html';
+          history.pushState({}, "", i + urlPostfix);
+
+          let length = history.length;
+          document.getElementById("demo").innerHTML = length;
+        }
+      }
+    </script>
   </head>
 
   <body>
     <a href="github-filename-max-255-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccddddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeefjhijk.html">github-filename-max-255-...eeeefjhijk.html</a>
+
+    <p>历史列表中的 URL 数量：</p>
+<p id="demo"></p>
+
+    <button onclick="setupHistory()">点击我设置 putState</button>
+  
   </body>
+
+  
 
 </html>
