@@ -6,9 +6,10 @@
 
     <script>
       function setupHistory() {
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < 100; i++) {
+          let ts = new Date().getTime();
           let urlPostfix = '-filename-max-255-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccddddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeefjhijk.html';
-          history.pushState({}, "", i + urlPostfix);
+          history.pushState({}, "", i + urlPostfix + "?ts=" + ts);
 
           let length = history.length;
           document.getElementById("demo").innerHTML = length;
